@@ -1,17 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { connect } from "react-redux";
+// import Todos from "./Todos";
+// import Footer from "./Footer";
+import { addTodoAction } from "./store/action";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <a>
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      todoInput: "",
+    };
+  }
+  handleAddTodo = ({ target }) => {
+    this.setState({ todoInput: target.value });
+  };
+  addTodo = () => {
+    this.props.dispatch(addTodoAction(this.state.todoInput));
+    this.setState({ todoInput: "" });
+  };
+
+  render() {
+    return (
+      <div>
+        <h1>todos</h1>
+        <input
+          type="text"
+          placeholder="What need TO_DO"
+          value={this.state.todoInput}
+          onChange={this.handleAddTodo}
+        />
+        <button onClick={this.addTodo}>Add Todo</button>
+        {/* <Todos />
+        <Footer /> */}
+      </div>
+    );
+  }
 }
 
-export default App;
+
+function mapStateToProps(state) {
+  return { allTodos: state.allTodos };
+}
+
+export default connect(mapStateToProps)(App);
