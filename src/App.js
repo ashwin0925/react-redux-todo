@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import Todos from "./Todos";
-// import Footer from "./Footer";
+import Footer from "./Footer";
 import { addTodoAction } from "./store/action";
 import "./style.css";
 
@@ -33,7 +33,7 @@ class App extends React.Component {
         />
         <button className="button" onClick={this.addTodo}><span>Add TO_DO </span></button>
         <Todos />
-        {/* <Footer /> */}
+        <Footer />
       </div>
     );
   }

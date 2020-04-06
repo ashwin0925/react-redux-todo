@@ -40,6 +40,8 @@ function mapStateToProps({ allTodos, activeTab }) {
         return todos.filter((todo) => todo.isDone);
       case "active":
         return todos.filter((todo) => !todo.isDone);
+      case "clear":
+        return todos.filter((todo) => todo.isDone);
       default:
         break;
     }

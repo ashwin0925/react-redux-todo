@@ -80,5 +80,22 @@ li {
   align-items: center;
 }
 .active {
-  background: tomato;
+  background: green;
+}
+
+.buttons {
+  margin: 0px 435px;
+  margin-right: 565px;
+}
+
+button {
+  margin: 5px;
+  border: none;
+  background: black;
+  color: #ffffff;
+  width: auto;
+  height: 25px;
+  border-radius: 4px;
+  font-weight: bold;
+  padding: 0px 7px;
 }
