@@ -71,7 +71,7 @@ ul {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  margin-left: 435px;
+  /* margin-left: 435px; */
   padding: 0px;
 }
 li {
@@ -84,8 +84,9 @@ li {
 }
 
 .buttons {
-  margin: 0px 435px;
-  margin-right: 565px;
+  /* margin: 0px 435px;
+  margin-right: 565px; */
+  text-align: center;
 }
 
 button {
