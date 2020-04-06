@@ -8,11 +8,16 @@ body {
 }
 
 input[type="text"] {
-  width: 300px;
+  width: 350px;
+  height: 35px;
+  border-radius: 3px;
+  border: 1px solid black;
+  font-size: 14px;
 }
+
 li {
   display: flex;
-  width: 300px;
+  width: 350px;
 
   justify-content: space-around;
   align-items: center;
@@ -29,4 +34,44 @@ h1 {
 
 .todos {
   text-align: center;
+}
+
+.button {
+  border-radius: 4px;
+  background-color: black;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  padding: 5px;
+  width: 120px;
+  height: 35px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 10px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
 }

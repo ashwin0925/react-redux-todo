@@ -27,11 +27,11 @@ class App extends React.Component {
         <h1>TO_DO</h1>
         <input
           type="text"
-          placeholder="What need TO_DO"
+          placeholder="What need TO_DO...?"
           value={this.state.todoInput}
           onChange={this.handleAddTodo}
         />
-        <button onClick={this.addTodo}>Add Todo</button>
+        <button className="button" onClick={this.addTodo}><span>Add TO_DO </span></button>
         {/* <Todos />
         <Footer /> */}
       </div>
