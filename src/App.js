@@ -3,6 +3,8 @@ import { connect } from "react-redux";
 // import Todos from "./Todos";
 // import Footer from "./Footer";
 import { addTodoAction } from "./store/action";
+import "./style.css";
+
 
 class App extends React.Component {
   constructor(props) {
@@ -21,8 +23,8 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>todos</h1>
+      <div className="todos">
+        <h1>TO_DO</h1>
         <input
           type="text"
           placeholder="What need TO_DO"

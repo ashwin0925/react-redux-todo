@@ -12,7 +12,7 @@ let initialState = JSON.parse(localStorage.getItem("myTodos")) || {
 };
 
 export default function todoReducer(state = initialState, action) {
-  switch (action, type) {
+  switch (action.type) {
     case ADD_TODO:
       let newTodo = { text: action.payload, isDone: false, id: uuid() };
 
