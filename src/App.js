@@ -44,4 +44,4 @@ function mapStateToProps(state) {
   return { allTodos: state.allTodos };
 }
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps)(App)
