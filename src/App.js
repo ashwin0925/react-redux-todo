@@ -35,7 +35,7 @@ class App extends React.Component {
         <Todos />
         <Footer />
       </div>
-      <div><h1>hello</h1></div>
+      <div><h1></h1></div>
     );
   }
 }
