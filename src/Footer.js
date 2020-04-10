@@ -37,8 +37,8 @@ const Footer = (props) => {
     </div>
   );
 };
-// function mapState(state) {
-//   return { activeTab: state.activeTab };
-// }
+function mapState(state) {
+  return { activeTab: state.activeTab };
+}
 
 export default connect(mapState)(Footer);
